@@ -3,8 +3,8 @@
    Frontend application (Supabase backend)
    CONFIG: paste your project URL and anon key below.
    ============================================================ */
-const SUPABASE_URL      = 'https://YOUR-PROJECT-REF.supabase.co';
-const SUPABASE_ANON_KEY = 'YOUR-ANON-PUBLIC-KEY';
+const SUPABASE_URL      = 'sb_publishable_Kin2H_bCAeeyuxDFMB0Kww_x8Sz2J0o';
+const SUPABASE_ANON_KEY = 'sb_secret_RlixionfjRtVGzmhqg7QeQ_IlNRGkaY';
 
 const sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 

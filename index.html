@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Imago Dei Health &amp; Birth Center — Patient Intake &amp; Service Records</title>
+<link rel="icon" href="assets/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+</head>
+<body>
+
+<!-- LOGIN -->
+<div id="login-screen" class="login-screen hidden">
+  <div class="login-card">
+    <img src="assets/logo.jpg" alt="Imago Dei logo" class="login-logo">
+    <h1 class="brand-title">Imago Dei</h1>
+    <p class="brand-sub">Health &amp; Birth Center<br>Patient Intake &amp; Service Record Management</p>
+    <form id="login-form">
+      <label>Email<input type="email" id="login-email" required autocomplete="username"></label>
+      <label>Password<input type="password" id="login-password" required autocomplete="current-password"></label>
+      <button type="submit" class="btn btn-primary btn-block" id="login-btn">Sign In</button>
+    </form>
+    <p class="login-error hidden" id="login-error"></p>
+  </div>
+</div>
+
+<!-- APP SHELL -->
+<div id="app-shell" class="app-shell hidden">
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <img src="assets/logo.jpg" alt="logo" class="sidebar-logo">
+      <div><strong>Imago Dei</strong><small>Health &amp; Birth Center</small></div>
+    </div>
+    <nav id="nav">
+      <a href="#/dashboard" data-route="/dashboard">&#9638; Dashboard</a>
+      <a href="#/clients" data-route="/clients">&#128100; Client Registry</a>
+      <a href="#/register" data-route="/register">&#10010; Register Client</a>
+      <a href="#/midwives" data-route="/midwives">&#10010; Midwives</a>
+      <a href="#/services" data-route="/services">&#10010; Services</a>
+      <a href="#/reports" data-route="/reports">&#128202; Reports</a>
+    </nav>
+    <div class="sidebar-footer">
+      <div id="user-info" class="user-info"></div>
+      <button class="btn btn-ghost btn-block" id="logout-btn">Sign Out</button>
+    </div>
+  </aside>
+  <main class="main" id="main"></main>
+</div>
+
+<div id="toast-container"></div>
+<div id="modal-root"></div>
+<div id="print-area" class="print-area"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
